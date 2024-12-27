@@ -63,7 +63,6 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-  margin: 20px;
 }
 
 .result__video {
@@ -82,6 +81,13 @@ ol {
   justify-content: space-between;
   align-items: flex-start;
 } 
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 .content__list-container {
   block-size: 298px;
@@ -100,7 +106,22 @@ ol {
   align-items: flex-start;
   gap: 10px;
 }
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
 
+}
+.content__accent {
+  color: #545050;
+}
+.content__card-link {
+  color: #FFF;
+  text-decoration: none;
+}
 .content__video-card {
   padding: 8px;
   display: flex;
@@ -112,7 +133,27 @@ ol {
 .content__video-card-description-container {
   flex-grow: 1;
 }
+.content__video-card-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  color: #FFF;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
+.content__video-card-description {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px;
+  color: #FFF;
+  line-clamp: 2;
+}
 .content__video-card-thumbnail {
   inline-size: 194px;
   block-size: 103px;

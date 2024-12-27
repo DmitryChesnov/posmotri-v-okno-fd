@@ -52,15 +52,26 @@ ol {
   background-color: #D9D9D9;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
+
 .content {
   display: grid;
-  grid-template-columns:  2fr 1fr;
+  grid-template-columns: 711px 399px;
   align-items: start;
   gap: 10px;
   inline-size: 100%
 }
 .result__video-container {
   position: relative;
+  block-size: inherit;
   width: 711px;
   height: 386px;
 }
@@ -81,6 +92,10 @@ ol {
   justify-content: space-between;
   align-items: flex-start;
 } 
+
+.search-form__fieldset {
+  border: none;
+}
 .search-form__fieldset-title {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -89,10 +104,75 @@ ol {
   line-height: normal;
 }
 
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: fit-content;
+
+}
+
+.search-form__textfield {
+  border-top: 1px solid #FFF;
+  border-right: none;
+  border-bottom: 1px solid #FFF;
+  border-left: none;
+  padding: 2px 0;
+  color: currentColor;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  inline-size: 225px;
+  appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:focus-visible {
+  outline: none;
+}
+
+.search-form__label:has(.search-form__textfield:focus-visible){
+  outline: 1px solid white;
+  outline-offset: 2px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+
+}
+
+.search-form__pseudo-checkbox {
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border: 1px solid #FFF;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  display: block;
+  background-color: #FFF;
+  inline-size: 15px;
+  block-size: 15px;
+  margin: 1px 0 0 1px;
+}
+
+.search-form__checkbox:has(.search-form__checkbox:focus-visible){
+  outline: 1px solid white;
+  outline-offset: 2px;
+}
+
 .content__list-container {
   block-size: 298px;
   height: 300px;
   overflow-y: scroll;
+  position: relative;
 }
 .content__list-item {
   width: 100%;

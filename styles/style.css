@@ -168,6 +168,42 @@ ol {
   outline-offset: 2px;
 }
 
+.button {
+  border: 1px solid #FFF;
+  padding: 6px 0;
+  color: #FFF;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+  inline-size: 100%;
+}
+
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  inline-size: 194px;
+}
+
 .content__list-container {
   block-size: 298px;
   height: 300px;
@@ -239,4 +275,7 @@ ol {
   block-size: 103px;
   object-fit: cover;
   object-position: center;
+}
+.more-button {
+  inline-size: 100%;
 }

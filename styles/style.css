@@ -18,6 +18,8 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  margin-top: 67px;
+  margin-left: 28px;
 }
 
 h1,
@@ -109,7 +111,7 @@ ol {
   flex-direction: row;
   gap: 5px;
   width: fit-content;
-
+  cursor: pointer;
 }
 
 .search-form__textfield {
@@ -125,6 +127,7 @@ ol {
   background-color: transparent;
   inline-size: 225px;
   appearance: none;
+  cursor: pointer;
 }
 
 .search-form__textfield:focus {
@@ -192,8 +195,6 @@ ol {
   background-color: #545050;
 }
 
-
-
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
@@ -210,9 +211,16 @@ ol {
   overflow-y: scroll;
   position: relative;
 }
+
+.content__list {
+  position: relative;
+}
+
 .content__list-item {
   width: 100%;
   gap: 15px;
+  padding-left: 3px;
+  padding-right: 3px;
 
 }
 .content__details {
@@ -238,6 +246,28 @@ ol {
   color: #FFF;
   text-decoration: none;
 }
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline 1px #FFF;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #FFF;
+}
+
+.content__card-link_current {
+  border-color: #545050;
+  background-color: #545050;
+}
+
 .content__video-card {
   padding: 8px;
   display: flex;
@@ -259,6 +289,7 @@ ol {
   text-transform: uppercase;
   text-overflow: ellipsis;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .content__video-card-description {
@@ -269,6 +300,7 @@ ol {
   line-height: 16.2px;
   color: #FFF;
   line-clamp: 2;
+  cursor: pointer;
 }
 .content__video-card-thumbnail {
   inline-size: 194px;
